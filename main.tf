@@ -18,6 +18,21 @@ resource "azurerm_linux_web_app" "this" {
 
   app_settings = var.app_settings
 
+  dynamic "identity" {
+    for_each = local.identity_type == "SystemAssigned" ? [1] : []
+    content {
+      type = local.identity_type
+    }
+  }
+
+  dynamic "identity" {
+    for_each = local.identity_type == "SystemAssigned, UserAssigned" || local.identity_type == "UserAssigned" ? [1] : []
+    content {
+      type         = local.identity_type
+      identity_ids = var.user_assigned_managed_ids
+    }
+  }
+
   site_config {
     always_on                 = var.always_on
     http2_enabled             = var.http2_enabled
