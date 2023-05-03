@@ -21,7 +21,7 @@ resource "azurerm_linux_web_app" "this" {
   site_config {
     always_on                 = var.always_on
     http2_enabled             = var.http2_enabled
-    min_tls_version           = var.min_tls_version
+    minimum_tls_version           = var.min_tls_version
     application_stack {
       docker_image     = var.docker_image
       docker_image_tag = var.docker_image_tag
