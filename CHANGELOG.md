@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/vivitian930/tf-azurerm-linux-web-app/compare/v0.1.3...v0.2.0) (2023-05-03)
+
+
+### Features
+
+* add identities to linux web app ([2adb4bc](https://github.com/vivitian930/tf-azurerm-linux-web-app/commit/2adb4bc075cdf54db48bbddf65cafe35e996ffb8))
+
 ### [0.1.3](https://github.com/vivitian930/tf-azurerm-linux-web-app/compare/v0.1.2...v0.1.3) (2023-05-03)
 
 
