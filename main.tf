@@ -14,7 +14,7 @@ resource "azurerm_linux_web_app" "this" {
   name                = var.name
   resource_group_name = var.resource_group_name
   location            = var.location
-  service_plan_id     = var.existing_app_service_plan_id == "" ? var.existing_app_service_plan_id : azurerm_service_plan.this[0].id
+  service_plan_id     = var.existing_app_service_plan_id != "" ? var.existing_app_service_plan_id : azurerm_service_plan.this[0].id
 
   app_settings = var.app_settings
 
